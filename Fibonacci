@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int c=0,p=1,next;
+    int *pc=&c;
+    int *pp=&p;
+    int *pn=&next;
+    int n;
+    printf("n=");
+    scanf("%d",&n);
+    int f[n];
+    printf("fibonacci series:%d,%d",*pc,*pp);
+    for(int i=2;i<n;i++)
+    {   
+        *pn=*pc+*pp;
+        f[i]=*pn;
+
+        printf(",%d",f[i]);
+        *pc=*pp;
+        *pp=*pn;
+
+    }
+    
+      
+
+      return 0;
+}
